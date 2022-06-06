@@ -319,7 +319,13 @@
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  width: 20%;
+  width: 20% !important;
+
+  flex: 0 0 auto;
+width: auto;
+
+
+margin-right: 10px;
   background-color: #e8b404;
   border-top-right-radius: 30px;
   border-bottom-left-radius: 30px;
@@ -330,6 +336,11 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 30%;
+  flex: 0 0 auto;
+  width: auto;
+  
+  
+  margin-right: 10px;
   background-color: #e8b404;
   border-top-right-radius: 30px;
   border-bottom-left-radius: 30px;
@@ -363,9 +374,11 @@
 
 .cardsrow {
   display: flex;
-  flex-direction: row;
+  flex-wrap: no-wrap;
   overflow-x: auto;
+  margin: 20px;
 }
+
 
 .hr {
   background-color: #e8b404;
@@ -385,10 +398,10 @@
 .Showmore {
   border-radius: 28px;
   border: 5px solid #e8b404;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: bold;
-  height: 50px;
-  width: 200px;
+  height: 30px;
+  width:100px;
   background-color: white;
   padding-left: 10px;
   padding-right: 10px;

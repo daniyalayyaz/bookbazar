@@ -67,6 +67,87 @@ const Home = () => {
               </div>
             </div>
           </div>
+          <div class="card">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/001/263/879/small/books-globe-and-clock-on-shelves.jpg"
+              alt="Avatar"
+              style={{ width: "100%", borderTopRightRadius: "30px" }}
+            />
+            <div class="container">
+              <h4>XYZ BOOK DEPOT</h4>
+              <p>One time story & location</p>
+              <div class="cardrating">
+                <h5>Rating</h5>
+                <i class="far fa-star-half-alt searchicon"></i>
+                <h5>(4.3)</h5>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/001/263/879/small/books-globe-and-clock-on-shelves.jpg"
+              alt="Avatar"
+              style={{ width: "100%", borderTopRightRadius: "30px" }}
+            />
+            <div class="container">
+              <h4>XYZ BOOK DEPOT</h4>
+              <p>One time story & location</p>
+              <div class="cardrating">
+                <h5>Rating</h5>
+                <i class="far fa-star-half-alt searchicon"></i>
+                <h5>(4.3)</h5>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/001/263/879/small/books-globe-and-clock-on-shelves.jpg"
+              alt="Avatar"
+              style={{ width: "100%", borderTopRightRadius: "30px" }}
+            />
+            <div class="container">
+              <h4>XYZ BOOK DEPOT</h4>
+              <p>One time story & location</p>
+              <div class="cardrating">
+                <h5>Rating</h5>
+                <i class="far fa-star-half-alt searchicon"></i>
+                <h5>(4.3)</h5>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/001/263/879/small/books-globe-and-clock-on-shelves.jpg"
+              alt="Avatar"
+              style={{ width: "100%", borderTopRightRadius: "30px" }}
+            />
+            <div class="container">
+              <h4>XYZ BOOK DEPOT</h4>
+              <p>One time story & location</p>
+              <div class="cardrating">
+                <h5>Rating</h5>
+                <i class="far fa-star-half-alt searchicon"></i>
+                <h5>(4.3)</h5>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/001/263/879/small/books-globe-and-clock-on-shelves.jpg"
+              alt="Avatar"
+              style={{ width: "100%", borderTopRightRadius: "30px" }}
+            />
+            <div class="container">
+              <h4>XYZ BOOK DEPOT</h4>
+              <p>One time story & location</p>
+              <div class="cardrating">
+                <h5>Rating</h5>
+                <i class="far fa-star-half-alt searchicon"></i>
+                <h5>(4.3)</h5>
+              </div>
+            </div>
+          </div>
+          
         </div>
         <hr class="hr" />
       </div>
