@@ -1,5 +1,12 @@
 import React from "react";
+import UerServices from "../../services/UserServices";
 const Home = () => {
+  const [book, setBook] = React.useState([]);
+  React.useEffect(() => {
+    UerServices.bookstore().then((val) => {
+      setBook(val.Book);
+    });
+  }, []);
   return (
     <div class="scroll">
       <div class="header">
@@ -51,103 +58,25 @@ const Home = () => {
           </button>
         </div>
         <div class="cardsrow">
-          <div class="card">
-            <img
-              src="https://static.vecteezy.com/system/resources/thumbnails/001/263/879/small/books-globe-and-clock-on-shelves.jpg"
-              alt="Avatar"
-              style={{ width: "100%", borderTopRightRadius: "30px" }}
-            />
-            <div class="container">
-              <h4>XYZ BOOK DEPOT</h4>
-              <p>One time story & location</p>
-              <div class="cardrating">
-                <h5>Rating</h5>
-                <i class="far fa-star-half-alt searchicon"></i>
-                <h5>(4.3)</h5>
+          {book.length > 0 &&
+            book.map((val) => (
+              <div class="card">
+                <img
+                  src="https://static.vecteezy.com/system/resources/thumbnails/001/263/879/small/books-globe-and-clock-on-shelves.jpg"
+                  alt="Avatar"
+                  style={{ width: "100%", borderTopRightRadius: "30px" }}
+                />
+                <div class="container">
+                  <h4>{val.title}</h4>
+                  <p>{val.description}</p>
+                  <div class="cardrating">
+                    <h5>Rating</h5>
+                    <i class="far fa-star-half-alt searchicon"></i>
+                    <h5>({val.rating})</h5>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="https://static.vecteezy.com/system/resources/thumbnails/001/263/879/small/books-globe-and-clock-on-shelves.jpg"
-              alt="Avatar"
-              style={{ width: "100%", borderTopRightRadius: "30px" }}
-            />
-            <div class="container">
-              <h4>XYZ BOOK DEPOT</h4>
-              <p>One time story & location</p>
-              <div class="cardrating">
-                <h5>Rating</h5>
-                <i class="far fa-star-half-alt searchicon"></i>
-                <h5>(4.3)</h5>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="https://static.vecteezy.com/system/resources/thumbnails/001/263/879/small/books-globe-and-clock-on-shelves.jpg"
-              alt="Avatar"
-              style={{ width: "100%", borderTopRightRadius: "30px" }}
-            />
-            <div class="container">
-              <h4>XYZ BOOK DEPOT</h4>
-              <p>One time story & location</p>
-              <div class="cardrating">
-                <h5>Rating</h5>
-                <i class="far fa-star-half-alt searchicon"></i>
-                <h5>(4.3)</h5>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="https://static.vecteezy.com/system/resources/thumbnails/001/263/879/small/books-globe-and-clock-on-shelves.jpg"
-              alt="Avatar"
-              style={{ width: "100%", borderTopRightRadius: "30px" }}
-            />
-            <div class="container">
-              <h4>XYZ BOOK DEPOT</h4>
-              <p>One time story & location</p>
-              <div class="cardrating">
-                <h5>Rating</h5>
-                <i class="far fa-star-half-alt searchicon"></i>
-                <h5>(4.3)</h5>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="https://static.vecteezy.com/system/resources/thumbnails/001/263/879/small/books-globe-and-clock-on-shelves.jpg"
-              alt="Avatar"
-              style={{ width: "100%", borderTopRightRadius: "30px" }}
-            />
-            <div class="container">
-              <h4>XYZ BOOK DEPOT</h4>
-              <p>One time story & location</p>
-              <div class="cardrating">
-                <h5>Rating</h5>
-                <i class="far fa-star-half-alt searchicon"></i>
-                <h5>(4.3)</h5>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="https://static.vecteezy.com/system/resources/thumbnails/001/263/879/small/books-globe-and-clock-on-shelves.jpg"
-              alt="Avatar"
-              style={{ width: "100%", borderTopRightRadius: "30px" }}
-            />
-            <div class="container">
-              <h4>XYZ BOOK DEPOT</h4>
-              <p>One time story & location</p>
-              <div class="cardrating">
-                <h5>Rating</h5>
-                <i class="far fa-star-half-alt searchicon"></i>
-                <h5>(4.3)</h5>
-              </div>
-            </div>
-          </div>
-          
+            ))}
         </div>
         <hr class="hr" />
       </div>
@@ -159,31 +88,34 @@ const Home = () => {
           </button>
         </div>
         <div class="cardsrow">
-          <div class="sellingcard">
-            <div class="sellingcardrow">
-              <div style={{ width: "30%" }}>
-                <img
-                  src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2021/12/attachment_125401341-e1638892110107.jpeg?auto=format&q=60&fit=max&w=930"
-                  alt="Avatar"
-                  style={{
-                    width: "70px",
-                    height: "100px",
-                    padding: "20px",
-                    margin: "0 auto",
-                  }}
-                />
-              </div>
-              <div class="sellingcontainer">
-                <h4>XYZ BOOK</h4>
-                <p>XYZ Author</p>
-                <div class="cardrating">
-                  <h5>XYZ Author 2</h5>
-                  <h5>Price</h5>
-                  <h5>688 PKR</h5>
+          {book.length > 0 &&
+            book.map((val) => (
+              <div class="sellingcard">
+                <div class="sellingcardrow">
+                  <div style={{ width: "30%" }}>
+                    <img
+                      src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2021/12/attachment_125401341-e1638892110107.jpeg?auto=format&q=60&fit=max&w=930"
+                      alt="Avatar"
+                      style={{
+                        width: "70px",
+                        height: "100px",
+                        padding: "20px",
+                        margin: "0 auto",
+                      }}
+                    />
+                  </div>
+                  <div class="sellingcontainer">
+                    <h4>{val.title}</h4>
+                    <p>{val.auther}</p>
+                    <div class="cardrating">
+                      <h5>{val.auther}</h5>
+                      <h5>Price</h5>
+                      <h5>{val.Price} PKR</h5>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
+            ))}
         </div>
       </div>
     </div>

@@ -12,7 +12,7 @@ class UserServices extends GenericServices {
           reject(e);
         });
     });
-
+  bookstore = () => this.get("book");
   Register = (
     name,
     email,
