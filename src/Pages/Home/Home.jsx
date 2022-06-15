@@ -1,5 +1,6 @@
 import React from "react";
 import UerServices from "../../services/UserServices";
+import { useNavigate } from "react-router-dom";
 const Home = () => {
   const [book, setBook] = React.useState([]);
   React.useEffect(() => {
@@ -7,6 +8,7 @@ const Home = () => {
       setBook(val.Book);
     });
   }, []);
+  const navigate = useNavigate();
   return (
     <div class="scroll">
       <div class="header">
@@ -57,7 +59,7 @@ const Home = () => {
             Show more
           </button>
         </div>
-        <div class="cardsrow">
+        <div class="cardsrow" onClick={()=>navigate("/BookPage")} style={{cursor:"pointer"}}>
           {book.length > 0 &&
             book.map((val) => (
               <div class="card">
@@ -87,7 +89,7 @@ const Home = () => {
             Show more
           </button>
         </div>
-        <div class="cardsrow">
+        <div class="cardsrow" onClick={()=>navigate("/StorePage")} style={{cursor:"pointer"}}>
           {book.length > 0 &&
             book.map((val) => (
               <div class="sellingcard">
